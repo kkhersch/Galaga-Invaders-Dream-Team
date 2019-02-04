@@ -10,6 +10,10 @@ class Ship
 	def move_right
 	end
 
+	def move
+
+	end
+
 	def fire_missle
 	end
 

@@ -14,7 +14,7 @@ class GalagaInvaders
   end
 
   def draw
-    #TODO draw the state of the world
+    @ship.draw
   end
 
   def show
