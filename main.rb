@@ -26,13 +26,13 @@ class GalagaInvaders
 
   def key_pressed(key)
     if key == 'a'
-      @ship.moveLeft
+      @ship.move_left
     end
     if key == 'd'
-      @ship.moveRight
+      @ship.move_right
     end
     if key == ' '
-      @ship.fireMissle
+      @ship.fire_missle
     end
   end
 

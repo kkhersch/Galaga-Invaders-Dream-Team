@@ -4,13 +4,13 @@ class Ship
 
 	end
 
-	def moveLeft
+	def move_left
 	end
 
-	def mmoveRight
+	def move_right
 	end
 
-	def fireMissle
+	def fire_missle
 	end
 
 	def draw
