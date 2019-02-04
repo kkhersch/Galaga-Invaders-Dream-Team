@@ -1,14 +1,18 @@
 class Ship
 
-	def initialize() 
-	
+	def initialize()
+
 	end
 
-	def move
-		
+	def move_left
 	end
 
-	def fire
+	def move_right
+	end
 
+	def fire_missle
+	end
+
+	def draw
 	end
 end
