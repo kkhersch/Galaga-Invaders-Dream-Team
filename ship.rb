@@ -1,11 +1,11 @@
 class Ship
 
-	def initialize() 
-	
+	def initialize()
+
 	end
 
 	def move
-		
+
 	end
 
 	def fire
