@@ -14,6 +14,10 @@ class Ship
 		@location += @velocity
 	end
 
+	def move
+
+	end
+
 	def fire_missle
 	end
 
