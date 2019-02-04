@@ -16,7 +16,7 @@ class GalagaInvaders
   end
 
   def draw
-    #TODO draw the state of the world
+    @ship.draw
   end
 
   def show
@@ -28,13 +28,13 @@ class GalagaInvaders
 
   def key_pressed(key)
     if key == 'a'
-      @ship.moveLeft
+      @ship.move_left
     end
     if key == 'd'
-      @ship.moveRight
+      @ship.move_right
     end
     if key == ' '
-      @ship.fireMissle
+      @ship.fire_missle
     end
   end
 end
