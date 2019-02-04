@@ -1,9 +1,12 @@
 #main.#!/usr/bin/env ruby -wKU
 
+require_relative 'ship'
+
 class GalagaInvaders
 
   def initialize
     @caption = "Galaga Invaders"
+    @ship = Ship.new
   end
 
   def update
@@ -18,6 +21,18 @@ class GalagaInvaders
     while(true) do
       update
       draw
+    end
+  end
+
+  def key_pressed(key)
+    if key == 'a'
+      @ship.moveLeft
+    end
+    if key == 'd'
+      @ship.moveRight
+    end
+    if key == ' '
+      @ship.fireMissle
     end
   end
 
