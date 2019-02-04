@@ -3,14 +3,16 @@
 require_relative 'ship'
 
 class GalagaInvaders
-
   def initialize
     @caption = "Galaga Invaders"
     @ship = Ship.new
   end
 
   def update
-    #TODO update state of world
+    Ship.update_position
+    Alien.update_position
+    Missile.update_position
+    Forts.each do { |fort| fort.update_health }
   end
 
   def draw
@@ -35,7 +37,6 @@ class GalagaInvaders
       @ship.fireMissle
     end
   end
-
 end
 
 GalagaInvaders.new.show
