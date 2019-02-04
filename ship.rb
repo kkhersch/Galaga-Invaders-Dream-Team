@@ -1,13 +1,17 @@
 class Ship
 
 	def initialize()
-
+		@location = Vector[screen_width / 2, screen_height - 50]
+		#TODO acceleration modifies velocity which modifies position
+		@velocity = Vector[10, 0]
 	end
 
-	def move_left
+	def moveLeft
+		@location -= @velocity
 	end
 
-	def move_right
+	def mmoveRight
+		@location += @velocity
 	end
 
 	def fire_missle
