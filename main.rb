@@ -2,19 +2,22 @@
 
 require_relative 'ship'
 require_relative 'fort'
+require_relative 'event_timer'
 
 class GalagaInvaders
   def initialize
     @caption = "Galaga Invaders"
     @ship = Ship.new
     @forts = { left: Fort.new, middle_left: Fort.new, middle_right: Fort.new, right: Fort.new }
+    @timer = TimeKeeper.new
   end
 
   def update
-    Ship.update_position
-    Alien.update_position
-    Missile.update_position
-    Forts.each do { |fort| fort.update_health }
+    timer.tick
+    ship.update_position
+    alien.update_position
+    missile.update_position
+    forts.each do { |fort| fort.update_health }
   end
 
   def draw
