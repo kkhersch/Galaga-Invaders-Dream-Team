@@ -2,16 +2,20 @@ class Ship
 
 	attr_accessor :location, :velocity
 
+	SHIP_WIDTH = 100
+	SHIP_HEIGHT = 100
+	SHIP_VELOCITY = 10
+
 	def initialize()
 		@location = Vector[screen_width / 2, screen_height - 50]
-		@velocity = Vector[10, 0]
+		@velocity = SHIP_VELOCITY
 	end
 
 	def moveLeft
 		self.location -= velocity
 	end
 
-	def mmoveRight
+	def moveRight
 		self.location += velocity
 	end
 
@@ -19,8 +23,8 @@ class Ship
 		# is this necessary?
 	end
 
-	def fire_missle
-		# this should be moved to missle_collection
+	def nose_location
+		
 	end
 
 	def draw
