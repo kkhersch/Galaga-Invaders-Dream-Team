@@ -1,4 +1,4 @@
-class Missle
+class Missile
   attr_accessor :position
 
   def initialize(position)
