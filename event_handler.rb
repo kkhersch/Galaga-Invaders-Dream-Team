@@ -1,11 +1,9 @@
-class TimeKeeper
+class EventHandler
 
-  def initialize()
-    @current_time = 0
-  end
+  attr_accessor :time
 
-  def tick
-    @current_time += 1
+  def initialize(time)
+    @time
   end
 
 end
