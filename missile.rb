@@ -10,4 +10,12 @@ class Missile
   	position += velocity
   end
 
+  def draw
+  	puts self
+  end
+
+  def to_s
+  	"🚀 (#{position})"
+  end
+
 end
