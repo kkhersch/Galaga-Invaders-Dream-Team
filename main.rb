@@ -3,6 +3,7 @@
 require_relative 'ship'
 require_relative 'fort'
 require_relative 'event_timer'
+require_relative 'squadron'
 
 class GalagaInvaders
   def initialize
