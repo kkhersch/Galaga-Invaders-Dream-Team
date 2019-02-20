@@ -6,6 +6,9 @@ require_relative 'event_timer'
 require_relative 'squadron'
 
 class GalagaInvaders
+
+  attr_accessor :caption, :ship, :forts, :gameclock
+
   def initialize
     @caption = "Galaga Invaders"
     @ship = Ship.new
@@ -18,11 +21,10 @@ class GalagaInvaders
     ship.update_position
     alien.update_position
     missile.update_position
-    
   end
 
   def draw
-    @ship.draw
+    ship.draw
   end
 
   def show
@@ -34,13 +36,13 @@ class GalagaInvaders
 
   def key_pressed(key)
     if key == 'a'
-      @ship.move_left
+      ship.move_left
     end
     if key == 'd'
-      @ship.move_right
+      ship.move_right
     end
     if key == ' '
-      @ship.fire_missle
+      ship.fire_missle
     end
   end
 end
