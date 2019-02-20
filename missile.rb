@@ -7,7 +7,7 @@ class Missile
   end
 
   def move
-  	position += velocity
+  	self.position += self.velocity
   end
 
   def draw
