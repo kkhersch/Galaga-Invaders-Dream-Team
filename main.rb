@@ -9,11 +9,11 @@ class GalagaInvaders
     @caption = "Galaga Invaders"
     @ship = Ship.new
     @forts = { left: Fort.new, middle_left: Fort.new, middle_right: Fort.new, right: Fort.new }
-    @timer = TimeKeeper.new
+    @gameclock = GameClock.new
   end
 
   def update
-    timer.tick
+    gameclock.tick
     ship.update_position
     alien.update_position
     missile.update_position

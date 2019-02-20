@@ -1,4 +1,4 @@
-class TimeKeeper
+class GameClock
 
   def initialize()
     @current_time = 0
