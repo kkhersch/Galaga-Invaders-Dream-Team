@@ -1,5 +1,7 @@
 class Squadron
 
+	attr_accessor :pattern, :alien_collection
+
 	def initialize(pattern, alien_collection)
 		@pattern = pattern
 		@alien_collection = alien_collection
