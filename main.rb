@@ -3,6 +3,7 @@
 require_relative 'ship'
 require_relative 'fort'
 require_relative 'event_timer'
+require_relative 'squadron'
 
 class GalagaInvaders
   def initialize
@@ -17,7 +18,7 @@ class GalagaInvaders
     ship.update_position
     alien.update_position
     missile.update_position
-    forts.each do { |fort| fort.update_health }
+    
   end
 
   def draw
