@@ -27,7 +27,7 @@ class Ship
 		# is this necessary?
 	end
 
-	def to_s
-    "✈️ (#{location})"
+	def sprite_emoji
+    "✈️"
   end
 end

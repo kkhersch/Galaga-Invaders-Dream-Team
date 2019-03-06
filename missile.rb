@@ -1,19 +1,19 @@
 class Missile
   include Drawable
 
-  attr_accessor :position, :velocity
+  attr_accessor :location, :velocity
 
   def initialize(args)
-    @position = args.fetch(:position, Vector[0,0])
+    @position = args.fetch(:location, Vector[0,0])
     @velocity = args.fetch(:velocity, Vector[0,10])
   end
 
   def move
-  	position += velocity
+  	location += velocity
   end
 
-  def to_s
-  	"🚀 (#{position})"
+  def sprite_emoji
+  	"🚀"
   end
 
 end

@@ -14,6 +14,6 @@ class Fort
   end
 
   def to_s
-    "🏰 (#{location})"
+    "🏰"
   end
 end

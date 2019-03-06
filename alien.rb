@@ -1,17 +1,10 @@
 class Alien
-  include Drawable, Damagable
+  include Drawable
 
-  attr_accessor :position, :health
-
-  MAX_HEALTH = 1
+  attr_accessor :location
 
   def initialize(args)
-<<<<<<< HEAD
-    @health = MAX_HEALTH
-    position = args.fetch(:position, default_position)
-=======
-    @position = args.fetch(:position, default_position)
->>>>>>> 82402dfb274f1d647332d4914ad8d6db44006168
+    @position = args.fetch(:location, default_location)
   end
 
   def move
@@ -22,8 +15,12 @@ class Alien
 
   end
 
-  def default_position
+  def default_location
     # Where should this be?
+  end
+
+  def sprite_emoji
+    "👽"
   end
 
 end
