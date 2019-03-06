@@ -1,5 +1,4 @@
 # fort.rb
-
 class Fort
 
   attr_accessor :location, :color, :health
