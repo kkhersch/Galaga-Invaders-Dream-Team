@@ -1,6 +1,6 @@
 # fort.rb
 class Fort
-  include Drawable
+  include Drawable, Damagable
 
   attr_accessor :location, :color, :health
 

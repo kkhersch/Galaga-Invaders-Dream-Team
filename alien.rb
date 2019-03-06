@@ -1,9 +1,12 @@
 class Alien
-  include Drawable
+  include Drawable, Damagable
 
-  attr_accessor :position
+  attr_accessor :position, :health
+
+  MAX_HEALTH = 1
 
   def initialize(args)
+    @health = MAX_HEALTH
     position = args.fetch(:position, default_position)
   end
 
