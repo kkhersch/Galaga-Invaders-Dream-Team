@@ -1,18 +1,19 @@
 class Ship
+	include Drawable
 
 	attr_accessor :location, :velocity
 
 	def initialize()
-		@location = Vector[screen_width / 2, screen_height - 50]
-		@velocity = Vector[10, 0]
+		location = Vector[screen_width / 2, screen_height - 50]
+		velocity = Vector[10, 0]
 	end
 
 	def moveLeft
-		self.location -= velocity
+		location -= velocity
 	end
 
 	def mmoveRight
-		self.location += velocity
+		location += velocity
 	end
 
 	def move
@@ -21,10 +22,6 @@ class Ship
 
 	def fire_missle
 		# this should be moved to missle_collection
-	end
-
-	def draw
-		puts self
 	end
 
 	def to_s
