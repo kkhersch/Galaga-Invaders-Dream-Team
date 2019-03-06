@@ -4,7 +4,7 @@ class Alien
   attr_accessor :position
 
   def initialize(args)
-    position = args.fetch(:position, default_position)
+    @position = args.fetch(:position, default_position)
   end
 
   def move
