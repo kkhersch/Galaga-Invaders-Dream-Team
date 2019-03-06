@@ -23,10 +23,6 @@ class Ship
 		# is this necessary?
 	end
 
-	def nose_location
-		
-	end
-
 	def draw
 		puts self
 	end
