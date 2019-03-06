@@ -6,8 +6,8 @@ class Fort
 
   MAX_HEALTH = 100
 
-  def initialize(x, y)
-    @location = Vector[x, y]
+  def initialize()
+    @location = args.fetch(:location)
     @color = 'red'
     @health = MAX_HEALTH
     #TODO are there more things that make up a fort?
