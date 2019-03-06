@@ -1,19 +1,22 @@
 class Alien
+  include Drawable
 
-  def initialize(position) 
-    @position = position 
+  attr_accessor :position
+
+  def initialize(args)
+    position = args.fetch(:position, default_position)
   end
 
   def move
-    
+
   end
 
   def fire_missle
-    
+
   end
 
-  def draw
-
+  def default_position
+    # Where should this be?
   end
 
 end

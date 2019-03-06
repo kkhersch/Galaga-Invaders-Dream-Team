@@ -1,4 +1,6 @@
 class Ship
+	include Drawable
+	include Locatable
 
 	attr_accessor :location, :velocity
 
@@ -8,23 +10,19 @@ class Ship
 
 	def initialize()
 		@location = Vector[screen_width / 2, screen_height - 50]
-		@velocity = SHIP_VELOCITY
+		@velocity = Vector[10, 0]
 	end
 
 	def moveLeft
-		self.location -= velocity
+		location -= velocity
 	end
 
-	def moveRight
-		self.location += velocity
+	def mmoveRight
+		location += velocity
 	end
 
 	def move
 		# is this necessary?
-	end
-
-	def draw
-		puts self
 	end
 
 	def to_s
