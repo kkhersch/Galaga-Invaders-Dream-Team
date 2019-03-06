@@ -1,5 +1,4 @@
 # fort.rb
-
 class Fort
   include Drawable
 
