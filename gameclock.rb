@@ -14,7 +14,7 @@ class GameClock
   end
 
   def time_for_fly_in
-    
+
   end
 
   def time_for_mothership

@@ -19,7 +19,7 @@ class Ship
 		location -= velocity
 	end
 
-	def mmoveRight
+	def moveRight
 		location += velocity
 	end
 
