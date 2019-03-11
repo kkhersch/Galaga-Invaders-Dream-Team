@@ -4,27 +4,30 @@ require_relative 'ship'
 require_relative 'fort'
 require_relative 'event_timer'
 require_relative 'squadron'
+require_relative 'missile_collection'
 
 class GalagaInvaders
 
-  attr_accessor :caption, :ship, :forts, :gameclock
+  attr_accessor :caption, :ship, :forts, :gameclock, :missiles
 
   def initialize
     @caption = "Galaga Invaders"
     @ship = Ship.new
     @forts = { left: Fort.new, middle_left: Fort.new, middle_right: Fort.new, right: Fort.new }
     @gameclock = GameClock.new
+    @missiles = MissileCollection.new
   end
 
   def update
     gameclock.tick
     ship.update_position
     alien.update_position
-    missile.update_position
+    missiles.update_position
   end
 
   def draw
     ship.draw
+    missiles.draw
   end
 
   def show
@@ -42,7 +45,7 @@ class GalagaInvaders
       ship.move_right
     end
     if key == ' '
-      ship.fire_missle
+      missiles.launch_missile_from(ship)
     end
   end
 end
