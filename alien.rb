@@ -3,8 +3,13 @@ class Alien
 
   attr_accessor :location
 
-  def initialize(args)
-    @position = args.fetch(:location, default_location)
+  # def initialize(args)
+  #   @position = args.fetch(:location, default_location)
+  #   @health = MAX_HEALTH
+  # end
+
+  def post_initialize(args)
+    @location = args.fetch(:location, default_location)
     @health = MAX_HEALTH
   end
 

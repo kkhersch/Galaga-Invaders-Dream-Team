@@ -9,10 +9,15 @@ class Ship
 	MAX_HEALTH = 1
 
 	def initialize()
-		@location = Vector[screen_width / 2, screen_height - 50]
-		@acceleration = Vector[2, 0]
+		@location = Vector.new(screen_width / 2, screen_height - 50)
+		@acceleration = Vector.new(2, 0)
 		@health = MAX_HEALTH
-		@velocity = Vector[10, 0]
+		@velocity = Vector.new(10, 0)
+		post_initialize(args)
+	end
+
+	def post_initialize(args)
+		nil
 	end
 
 	def moveLeft

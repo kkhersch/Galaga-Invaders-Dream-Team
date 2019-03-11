@@ -1,11 +1,12 @@
 class MissileCollection
-  
+  attr_accessor :missiles
+
   def initialize
     @missiles = []
   end
 
   def launch_missile_for(ship)
-    add(Missile.new(x: ship.nose_location, velocity: [ship.nose_location, -10]))
+    add(Missile.new(location: ship.nose_location, velocity: ship.velocity))
   end
 
   def add(missile)
