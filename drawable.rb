@@ -1,7 +1,11 @@
 module Drawable
 
   def draw
-    # Draw the sprite the at its location
+    puts "#{sprite_emoji} (#{location})"
+  end
+
+  def sprite_emoji
+    "Not implemented"
   end
 
 end

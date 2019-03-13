@@ -28,10 +28,6 @@ class Ship
 		location += velocity
 	end
 
-	def move
-		# is this necessary?
-	end
-
 	def sprite_emoji
     "✈️"
   end
