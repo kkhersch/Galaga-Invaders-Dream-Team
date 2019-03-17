@@ -6,6 +6,7 @@ require_relative 'event_timer'
 require_relative 'squadron'
 require_relative 'missile_collection'
 require_relative 'alien'
+require_relative 'global_constants'
 
 class GalagaInvaders
 
